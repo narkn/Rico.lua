@@ -412,7 +412,7 @@ local antiaimtoggle = AntiAim:CreateToggle({
 local antiaimmethod = AntiAim:CreateDropdown({
     Name = "طريقة مكافحة الهدف",
     Options = {"اعادة ضبط السرعة","سرعة عشوائية","إعادة ضبط الموضع معطل"},
-    CurrentOption = "Reset Velo",
+    CurrentOption = "إعادة ضبط السرعة",
     Flag = "AntiAimMethod",
     Callback = function(Option)
         antiAimMethod = type(Option) == "table" and Option[1] or Option
@@ -427,7 +427,7 @@ local antiaimmethod = AntiAim:CreateDropdown({
 })
 
 local antiaimamountx = AntiAim:CreateSlider({
-    Name = "Anti-Aim Amount X",
+    Name = "كمية مكافحة الهدف X",
     Range = {-1000, 1000},
     Increment = 10,
     CurrentValue = 0,
@@ -438,7 +438,7 @@ local antiaimamountx = AntiAim:CreateSlider({
 })
 
 local antiaimamounty = AntiAim:CreateSlider({
-    Name = "Anti-Aim Amount Y",
+    Name = "كمية مكافحة الهدف Y",
     Range = {-1000, 1000},
     Increment = 10,
     CurrentValue = -100,
@@ -449,7 +449,7 @@ local antiaimamounty = AntiAim:CreateSlider({
 })
 
 local antiaimamountz = AntiAim:CreateSlider({
-    Name = "Anti-Aim Amount Z",
+    Name = "كمية مكافحة الهدف Z",
     Range = {-1000, 1000},
     Increment = 10,
     CurrentValue = 0,
@@ -460,7 +460,7 @@ local antiaimamountz = AntiAim:CreateSlider({
 })
 
 local randomvelorange = AntiAim:CreateSlider({
-    Name = "Random Velo Range",
+    Name = "نطاق فيلو العشوائي",
     Range = {0, 1000},
     Increment = 10,
     CurrentValue = 100,
@@ -473,7 +473,7 @@ local randomvelorange = AntiAim:CreateSlider({
 -- [< Misc >]
 
 local spinbottoggle = Misc:CreateToggle({
-    Name = "Spin-Bot",
+    Name = "سبين بوت",
     CurrentValue = false,
     Flag = "SpinBot",
     Callback = function(Value)
@@ -504,7 +504,7 @@ local spinbottoggle = Misc:CreateToggle({
 })
 
 local spinbotspeed = Misc:CreateSlider({
-    Name = "Spin-Bot Speed",
+    Name = "سرعة الدوران بوت",
     Range = {0, 1000},
     Increment = 1,
     CurrentValue = 20,
@@ -527,7 +527,7 @@ local spinbotspeed = Misc:CreateSlider({
 })
 
 local ServerHop = Misc:CreateButton({
-	Name = "Server Hop",
+	Name = "اعادة دخول سيرفر",
 	Callback = function()
 		if httprequest then
             local servers = {}
